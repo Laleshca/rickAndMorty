@@ -1,0 +1,10 @@
+<div class="card">
+    <img [src]="personaje.image" class="card-img-top" [alt]="personaje.name">
+    <div class="card-body">
+        <h5 class="card-title">{{ personaje.name }}</h5>
+        <p>
+            <button class="btn btn-outline-primary" 
+            [routerLink]="['/lista', personaje.id]">Ver más información</button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="container" *ngIf="!loading">
+    <h1>Personajes</h1>
+    <hr />
+    <div class="card-columns"> 
+        <div *ngFor="let personaje of result">
+            <app-card [personaje]="personaje" ></app-card>
+        </div>
+    </div>
+</div>
+
+

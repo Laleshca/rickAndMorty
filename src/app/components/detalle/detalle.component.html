@@ -1,0 +1,19 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="container" *ngIf="!loading">
+    <h2>{{ result.name }}</h2>
+    <div class="row">
+        <div class="col">
+            <img [src]="result.image">
+        </div>
+        <div class="col">
+            <p> Estado: {{result.status}} </p>
+            <p> Especie: {{result.species}} </p>
+            <p> Género: {{result.gender}} </p>
+            <p> Fecha de creación: {{result.created | date}}</p>
+            <p> Ubicación: {{result.location.name}} </p>
+            <p><button class="btn btn-outline-primary"
+                (click)="verUbicacion(result.location.name)">Ver ubicación</button></p>
+            <p><button class="btn btn-outline-danger" [routerLink]="['/lista']">Regresar</button></p>
+        </div>
+    </div>
+</div>

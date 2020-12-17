@@ -1,0 +1,16 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="container" *ngIf="!loading">
+    <h2>{{ result.name }}</h2>
+    <div class="row">
+        <div class="col">
+            <p> Nombre: {{result.name}} </p>
+            <p> Tipo: {{result.type}} </p>
+            <p> Dimensión: {{result.dimension}} </p>
+            <p> Fecha: {{result.created | date}} </p>
+            <p><button class="btn btn-outline-primary" 
+                [routerLink]="['/ubicacion']">Ver lista de Ubicaciones</button></p>
+            <p><button class="btn btn-outline-primary" 
+                [routerLink]="['/lista']">Ver lista de Personajes</button></p>
+        </div>
+    </div>
+</div>

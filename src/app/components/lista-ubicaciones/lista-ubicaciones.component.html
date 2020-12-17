@@ -1,0 +1,10 @@
+
+<app-loading *ngIf="loading"></app-loading>
+<div class="container" *ngIf="!loading">
+    <div class="btn-group" role="group" aria-label="Basic outlined example" *ngFor="let location of resultLocation">
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['/ubicacion', location.id]">{{location.name}}</button>
+      </div>
+</div>
+<div class="container">
+    <img src="/assets/img/tenor.gif" alt="">
+</div>
